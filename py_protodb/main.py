@@ -39,6 +39,8 @@ def generate(argv):
     codegen = CodeGen(config, database)
     codegen.generate_code()
 
+    print(f'\n================================ DONE ==================================\n')
+
 
 if __name__ == '__main__':
     generate(sys.argv[1:])
