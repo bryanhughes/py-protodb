@@ -7,7 +7,7 @@ from proto_gen import ProtoGen
 
 class ProtoGenTestCase(unittest.TestCase):
     def setUp(self):
-        self.config = Config('../py-protodb.yaml')
+        self.config = Config('py-protodb.yaml')
         self.database = Database(self.config)
 
     def test_write_protos(self):

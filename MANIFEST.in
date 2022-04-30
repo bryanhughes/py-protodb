@@ -1,0 +1,18 @@
+# Manifest syntax https://docs.python.org/2/distutils/sourcedist.html
+graft example
+
+recursive-include example/*
+recursive-exclude __pycache__  *.pyc *.pyo *.orig
+
+exclude *.js*
+exclude *.git*
+exclude *.coveragerc
+exclude proc*
+exclude pylint*
+
+include requirements*.*
+include *.py
+
+prune .git
+prune venv
+prune test*

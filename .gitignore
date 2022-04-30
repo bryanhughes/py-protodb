@@ -1,6 +1,10 @@
 example/proto
 example/public
 example/test_schema
+tests/example
+
+dist/
+py_protodb.egg-info/
 
 # Created by .ignore support plugin (hsz.mobi)
 ### VisualStudioCode template

@@ -7,7 +7,7 @@ from database import Database
 
 class CodeGenTestCase(unittest.TestCase):
     def setUp(self):
-        self.config = Config('../py-protodb.yaml')
+        self.config = Config('py-protodb.yaml')
         self.database = Database(self.config)
 
     def test_write_protos(self):
