@@ -3,8 +3,6 @@ example/public
 example/test_schema
 tests/example
 
-dist/
-py_protodb.egg-info/
 
 # Created by .ignore support plugin (hsz.mobi)
 ### VisualStudioCode template
@@ -153,7 +151,6 @@ xcuserdata/
 *.xccheckout
 
 ## compatibility with Xcode 3 and earlier (ignoring not required starting Xcode 4)
-build/
 DerivedData/
 *.moved-aside
 *.pbxuser
@@ -402,7 +399,6 @@ _pkginfo.txt
 # Others
 ClientBin/
 ~$*
-*~
 *.dbmdl
 *.dbproj.schemaview
 *.jfm
@@ -483,7 +479,6 @@ paket-files/
 .cr/personal
 
 # Python Tools for Visual Studio (PTVS)
-__pycache__/
 *.pyc
 
 # Cake - Uncomment if you are using it
@@ -543,6 +538,7 @@ __pycache__/
 
 # Distribution / packaging
 .Python
+py_protodb.egg-info/
 build/
 develop-eggs/
 dist/
@@ -591,7 +587,6 @@ cover/
 *.pot
 
 # Django stuff:
-*.log
 local_settings.py
 db.sqlite3
 db.sqlite3-journal

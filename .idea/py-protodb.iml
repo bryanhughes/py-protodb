@@ -4,6 +4,14 @@
     <content url="file://$MODULE_DIR$">
       <sourceFolder url="file://$MODULE_DIR$/py_protodb" isTestSource="false" />
       <excludeFolder url="file://$MODULE_DIR$/venv" />
+      <excludeFolder url="file://$MODULE_DIR$/.idea/dataSources" />
+      <excludeFolder url="file://$MODULE_DIR$/example/bin" />
+      <excludeFolder url="file://$MODULE_DIR$/example/proto" />
+      <excludeFolder url="file://$MODULE_DIR$/example/public" />
+      <excludeFolder url="file://$MODULE_DIR$/example/test_schema" />
+      <excludeFolder url="file://$MODULE_DIR$/tests/example" />
+      <excludeFolder url="file://$MODULE_DIR$/dist" />
+      <excludeFolder url="file://$MODULE_DIR$/py_protodb.egg-info" />
     </content>
     <orderEntry type="jdk" jdkName="Python 3.10 (py-protodb)" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
