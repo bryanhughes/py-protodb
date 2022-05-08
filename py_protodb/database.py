@@ -331,7 +331,7 @@ class Database:
             where_clause.append(cname + ' = $' + cname)
 
         if table.version_column is not None:
-            where_clause.append(table.version_column + ' = ' + table.version_column + ' + 1')
+            where_clause.append(table.version_column + ' = $' + table.version_column)
 
         clause = self.build_update_clause(table)
         returning_clause = self.build_select_list(table)

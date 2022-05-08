@@ -51,6 +51,7 @@ class CRUDTestCase(unittest.TestCase):
         self.assertFalse(user.HasField('user_id'))
         self.assertIsNotNone(user_1.user_id)
         self.assertEqual([100, 101], user_1.my_array)
+        self.assertEqual(0, user_1.version)
 
         user_2 = user_db.read(self.conn, user_id=user_1.user_id)
         print(f'user_2\n-------\n{user_2}')
@@ -72,6 +73,7 @@ class CRUDTestCase(unittest.TestCase):
         self.assertEqual(user_3.last_name, user_2.last_name)
         self.assertEqual(user_3.user_id, user_2.user_id)
         self.assertEqual([100, 101, 200], user_2.my_array)
+        self.assertEqual(user_3.version, 1)
 
         self.conn.close()
 

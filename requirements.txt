@@ -1,0 +1,5 @@
+PyYAML~=6.0
+psycopg~=3.0.10
+google~=3.0.0
+setuptools~=57.4.0
+sqlparse~=0.4.2

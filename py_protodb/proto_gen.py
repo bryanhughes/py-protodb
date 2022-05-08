@@ -1,5 +1,6 @@
 #!/usr/bin/env python
 import os
+import sys
 from datetime import datetime
 from typing import List
 
@@ -197,7 +198,12 @@ class ProtoGen:
         fullname = os.path.sep.join([src_dir, table.name + '.proto'])
         print(f'{os.getcwd()} {fullname}')
 
+        os.makedirs(dest_dir, exist_ok=True)
+
         cmd = protoc_path + 'protoc -I=' + src_dir + ' --python_out=' + dest_dir + ' ' + fullname
+        print(cmd)
         ret = os.system(cmd)
         if ret is not 0:
             print(f'   Failed to compile proto. Exit code: {ret}')
+            print(f'ABORTING!')
+            sys.exit()

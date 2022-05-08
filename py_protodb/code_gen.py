@@ -128,8 +128,12 @@ class CodeGen:
             pfile.write(f'    conn.execute({query_type}, bind_args)\n\n\n')
         else:
             pfile.write(f'    cur = conn.execute({query_type}, bind_args)\n')
-            pfile.write(f'    ({values}) = cur.fetchone()\n')
-            pfile.write(f'    return set_fields({values})\n\n\n')
+            pfile.write(f'    result = cur.fetchone()\n')
+            pfile.write(f'    if result is None:\n')
+            pfile.write(f'        return None\n')
+            pfile.write(f'    else:\n')
+            pfile.write(f'        ({values}) = result\n')
+            pfile.write(f'        return set_fields({values})\n\n\n')
 
     def write_set(self, pfile, table):
         returning = self.database.build_returning_list(table)
@@ -163,8 +167,12 @@ class CodeGen:
         returning = self.database.build_returning_list(table)
         values = ', '.join(returning)
         pfile.write(f'    cur = conn.execute({query_type}, [{params},])\n')
-        pfile.write(f'    ({values}) = cur.fetchone()\n')
-        pfile.write(f'    return set_fields({values})\n\n\n')
+        pfile.write(f'    result = cur.fetchone()\n')
+        pfile.write(f'    if result is None:\n')
+        pfile.write(f'        return None\n')
+        pfile.write(f'    else:\n')
+        pfile.write(f'        ({values}) = result\n')
+        pfile.write(f'        return set_fields({values})\n\n\n')
 
     @staticmethod
     def maybe_write_enum_value(pfile, table):
